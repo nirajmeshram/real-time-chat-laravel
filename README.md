@@ -46,11 +46,17 @@ Make sure your `.env` file includes the correct configuration for broadcasting:
 ```env
 BROADCAST_DRIVER=reverb
 
-REVERB_CONNECTION=pusher
-PUSHER_APP_ID=your_app_id
-PUSHER_APP_KEY=your_app_key
-PUSHER_APP_SECRET=your_app_secret
-PUSHER_APP_CLUSTER=your_cluster
+REVERB_APP_ID=
+REVERB_APP_KEY=
+REVERB_APP_SECRET=
+REVERB_HOST="localhost"
+REVERB_PORT=8080
+REVERB_SCHEME=http
+
+VITE_REVERB_APP_KEY="${REVERB_APP_KEY}"
+VITE_REVERB_HOST="${REVERB_HOST}"
+VITE_REVERB_PORT="${REVERB_PORT}"
+VITE_REVERB_SCHEME="${REVERB_SCHEME}"
 ```
 > **Note:** Replace `your_app_id`, `your_app_key`, `your_app_secret`, and `your_cluster` with your actual Pusher credentials or Reverb settings.
 
